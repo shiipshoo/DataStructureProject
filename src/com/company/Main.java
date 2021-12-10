@@ -24,6 +24,15 @@ public class Main {
         }
 
     }
+    //(D) O(N) + O(100) = O(N)
+    private static void simpleForloop1(int[] array){
+        for(int i = 0; i<array.length; i++){
+            System.out.println("Number: " + array[i] + " Square: " + array[i]*array[i]);
+        }
+        for(int i = 0; i<100; i++){
+            System.out.println("Print 100 times");
+        }
+    }
 
     public static void main(String[] args) {
 	    //(A) constant time O(1)
@@ -51,5 +60,7 @@ public class Main {
         System.out.println("Array3");
         simpleForLoop(array4);
 
+        //(D) linear time O(N)
+        simpleForloop1(array2);
     }
 }
